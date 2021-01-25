@@ -69,7 +69,7 @@ class Postgres extends ICrud {
                 //ssl: process.env.SSL_DB
                 ssl: {
                     require: process.env.SSL_DB,
-                    rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+                    rejectUnauthorized: false
                 }
             }
         })
