@@ -66,7 +66,11 @@ class Postgres extends ICrud {
             logging: false,
             ssl: process.env.SSL_DB,
             dialectOptions: {
-                ssl: process.env.SSL_DB
+                //ssl: process.env.SSL_DB
+                ssl: {
+                    require: process.env.SSL_DB,
+                    rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+                }
             }
         })
         return sequelize
