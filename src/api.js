@@ -13,6 +13,8 @@ const {
     ok
 } = require('assert')
 
+console.log('PASSOU AQUI!!!!!!!!!!!!!!!!!')
+
 const env = process.env.NODE_ENV || "dev"
 ok(env === "prod" || env === "dev", "a env é invalida, ou dev ou prod")
 
