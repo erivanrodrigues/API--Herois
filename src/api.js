@@ -2,6 +2,25 @@
 // npm i vision inert hapi-swagger
 // npm i hapi-auth-jwt2
 // npm i dotenv
+/**
+ * 1o Add procfile
+ * 2o up to heroku
+ * 
+ * 
+ * 2o add mlab
+ * 3o run NODE_ENV=prod npm t
+ * 
+ * 4o add postgres
+ * 5o add process.env.SSL_DB
+ * 6o add sequelize ssl
+ * 7o modify npm t --timeout 10000
+ * 8o upto heroku
+ * 
+ * 9o install pm2
+ * 10 up to heroku
+ * 11 add pm2 to pre-install
+ * 12 up to heroku
+ */
 
 const {
     config
@@ -17,14 +36,14 @@ console.log('PASSOU AQUI!!!!!!!!!!!!!!!!!')
 
 const env = process.env.NODE_ENV || "dev"
 ok(env === "prod" || env === "dev", "a env é invalida, ou dev ou prod")
-
+console.log('PASSOU AQUI!!!!!!!!!!!!!!!!!2')
 //__DIRNAME e o diretorio para pegar a configuração de qualquer lugar 
 const configPath = join(__dirname, './config', `.env.${env}`)
-
+console.log('PASSOU AQUI!!!!!!!!!!!!!!!!3')
 config({
     path: configPath
 })
-
+console.log('PASSOU AQUI!!!!!!!!!!!!!!!!4')
 const Hapi = require('hapi') // Importando o HAPI
 const Context = require('./db/strategies/base/contextStrategy')
 const MongoDb = require('./db/strategies/mongodb/mongodb')
