@@ -16,12 +16,12 @@ class MongoDB extends ICrud {
     }
     async isConnected() {
         const state = STATUS[this._connection.readyState]
-        if(state === 'Conectado') return state;
-        if(state !== 'Conectando') return state;
+        if (state === 'Conectado') return state;
+        if (state !== 'Conectando') return state;
         await new Promise(resolve => setTimeout(resolve, 1000))
         return STATUS[this._connection.readyState]
     }
-    
+
     static connect() {
         Mongoose.connect(process.env.MONGODB_URL, {
             useNewUrlParser: true,
@@ -38,14 +38,20 @@ class MongoDB extends ICrud {
         return this._schema.create(item)
     }
     // Listar com paginação 
-    read(item, skip=0, limit=10){
+    read(item, skip = 0, limit = 10) {
         return this._schema.find(item).skip(skip).limit(limit)
     }
-    update(id, item){
-        return this._schema.updateOne({_id: id}, {$set: item})
+    update(id, item) {
+        return this._schema.updateOne({
+            _id: id
+        }, {
+            $set: item
+        })
     }
-    delete(id){
-        return this._schema.deleteOne({_id: id})
+    delete(id) {
+        return this._schema.deleteOne({
+            _id: id
+        })
     }
 }
 
