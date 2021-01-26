@@ -41,7 +41,7 @@ console.log('PASSOU AQUI!!!!!!!!!!!!!!!!!2')
 
 //__DIRNAME e o diretorio para pegar a configuração de qualquer lugar 
 //const configPath = join(__dirname, './../config', `.env.${env}`)
-const configPath = join('./config', `.env.${env}`)
+const configPath = join('./../config', `.env.${env}`)
 
 console.log('PASSOU AQUI!!!!!!!!!!!!!!!!3')
 config({
