@@ -46,7 +46,7 @@ console.log('PASSOU AQUI!!!!!!!!!!!!!!!!3')
 config({
     path: configPath
 })
-console.log('PASSOU AQUI!!!!!!!!!!!!!!!!4', configPath.MONGODB_URL)
+console.log('PASSOU AQUI!!!!!!!!!!!!!!!!4', configPath)
 const Hapi = require('hapi') // Importando o HAPI
 const Context = require('./db/strategies/base/contextStrategy')
 const MongoDb = require('./db/strategies/mongodb/mongodb')
