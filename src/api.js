@@ -32,21 +32,16 @@ const {
     ok
 } = require('assert')
 
-console.log('PASSOU AQUI!!!!!!!!!!!!!!!!!')
 
 const env = process.env.NODE_ENV || "dev"
 ok(env === "prod" || env === "dev", "a env é invalida, ou dev ou prod")
 
-console.log('PASSOU AQUI!!!!!!!!!!!!!!!!!2')
-
 //__DIRNAME e o diretorio para pegar a configuração de qualquer lugar 
 const configPath = join(__dirname, './../config', `.env.${env}`)
 
-console.log('PASSOU AQUI!!!!!!!!!!!!!!!!3')
 config({
     path: configPath
 })
-console.log('PASSOU AQUI!!!!!!!!!!!!!!!!4', configPath)
 const Hapi = require('hapi') // Importando o HAPI
 const Context = require('./db/strategies/base/contextStrategy')
 const MongoDb = require('./db/strategies/mongodb/mongodb')
