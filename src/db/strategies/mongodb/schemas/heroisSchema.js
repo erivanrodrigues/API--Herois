@@ -14,4 +14,6 @@ const heroisSchema = new Mongoose.Schema({
         default: new Date()
     }
 })
-module.exports = Mongoose.model('heroi', heroisSchema)
+//mocha workaround
+//module.exports = Mongoose.model('heroi', heroisSchema)
+module.exports = Mongoose.models.herois || Mongoose.model('herois', heroiSchema)
