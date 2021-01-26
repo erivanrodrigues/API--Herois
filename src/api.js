@@ -135,6 +135,8 @@ async function main() {
 
     await app.start()
     console.log('Servidor rodando na porta ', app.info.port)
+    console.log('Servidor rodando na porta2 ', app)
+    
     return app
 }
 module.exports = main()
