@@ -7,6 +7,9 @@ class UtilRoutes extends BaseRoute {
             path: '/coverage/{param*}',
             method: 'GET',
             config: {
+                tags: ['api'],
+                description: 'Cobertura de código',
+                notes: ' a quantidade do código!',
                 auth: false
             },
             handler:{
