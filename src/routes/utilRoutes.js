@@ -9,7 +9,7 @@ class UtilRoutes extends BaseRoute {
             config: {
                 tags: ['api'],
                 description: 'Cobertura de código',
-                notes: ' a quantidade do código!',
+                notes: 'Identifica a quantidade do código!',
                 auth: false
             },
             handler:{
