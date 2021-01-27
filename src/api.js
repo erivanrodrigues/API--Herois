@@ -48,6 +48,7 @@ const MongoDb = require('./db/strategies/mongodb/mongodb')
 const HeroiSchema = require('./db/strategies/mongodb/schemas/heroisSchema')
 const HeroRoute = require('./routes/heroRoutes')
 const AuthRoude = require('./routes/authRoutes')
+const UtilRoutes = require('./routes/utilRoutes')
 
 const Postgres = require('./db/strategies/postgres/postgres')
 const UsuarioSchema = require('./db/strategies/postgres/schemas/usuarioSchema')
@@ -58,6 +59,7 @@ const Vision = require('vision')
 const Inert = require('inert')
 const HapiJwt = require('hapi-auth-jwt2')
 const JWT_SECRET = process.env.JWT_KEY
+
 
 
 //Inicializar o HAPI
@@ -124,7 +126,8 @@ async function main() {
     app.auth.default('jwt')
     app.route([
         ...mapRoutes(new HeroRoute(context), HeroRoute.method()),
-        ...mapRoutes(new AuthRoude(JWT_SECRET, contextPostgres), AuthRoude.method())
+        ...mapRoutes(new AuthRoude(JWT_SECRET, contextPostgres), AuthRoude.method()),
+        ...mapRoutes(new UtilRoutes(), UtilRoutes.method())
     ])
 
 
