@@ -1,6 +1,6 @@
 node_modules
 .nyc_output
 coverage
-README.md
-config.env.dev
-config.env.prod
+README2.md
+.env.dev
+.env.prod
