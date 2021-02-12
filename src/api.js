@@ -84,7 +84,7 @@ async function main() {
 
     const swaggerOptions = {
         info: {
-            title: 'API Herois - #CursoNodeBR',
+            title: 'API Herois - #Erivan',
             version: 'v1.0'
         },
         //leng: 'pt'
