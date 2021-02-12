@@ -84,7 +84,8 @@ async function main() {
 
     const swaggerOptions = {
         info: {
-            title: 'API Herois - #Erivan',
+            title: 'API Herois - #Erivan ',
+            description: 'Rodando no Heroku acessando o Cloud.mongodb.com e Heroku Postgres',
             version: 'v1.0'
         },
         //leng: 'pt'

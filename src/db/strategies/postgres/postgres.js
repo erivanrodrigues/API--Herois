@@ -11,6 +11,7 @@ class Postgres extends ICrud {
     async isConnected() {
         try {
             await this._connection.authenticate()
+            console.log('Database Postgres rodando!!')
             return true
         } catch (error) {
             console.log('FALHA! ', error)

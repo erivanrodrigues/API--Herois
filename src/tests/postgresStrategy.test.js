@@ -47,7 +47,7 @@ describe('========================Postgres Strategy======================', func
         const [itemAtualizar] = await context.read({nome: MOCK_HEROI_ATUALIZAR.nome})
         const novoItem = {
             ...MOCK_HEROI_ATUALIZAR,
-            nome: 'Mulher Maravilha'
+            nome: 'Mulher Maravilha2'
         }
         const [result] = await context.update(itemAtualizar.id, novoItem)
         const [itemAtualizado] = await context.read({id: itemAtualizar.id})
