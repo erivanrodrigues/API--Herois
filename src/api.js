@@ -81,7 +81,6 @@ async function main() {
     const contextPostgres = new Context(new Postgres(connectionPostgres, usuarioSchema))
 
 
-
     const swaggerOptions = {
         info: {
             title: 'API Herois - #Erivan ',
